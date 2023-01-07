@@ -124,19 +124,20 @@ public class HomePage extends Base{
             // Get random product from list between 1 and products variable size
             Random random = new Random();
             index = random.nextInt(products.size() - 1);
+            for (int i=0;i<products.size();i++)
+            {
+                if (i==index)
+                {
+                    products.get(i).click();
+                }
+            }
         }
         else if (products.size() <1)
         {
             System.out.println("list of products is empty");
         }
 
-        for (int i=0;i<products.size();i++)
-        {
-            if (i==index)
-            {
-                products.get(i).click();
-            }
-        }
+
     }
 
 
